@@ -48,12 +48,12 @@ class Market
     else
       @vendors.each do |vendor|
         if vendor.inventory.keys.include?(item)
-          total_inventory[item] -= amt
+          vendor.inventory[item] -= amt
         end
+        # require 'pry'; binding.pry
       end
       return true
     end
-    total_inventory
   end
 
 end

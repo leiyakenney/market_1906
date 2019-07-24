@@ -7,7 +7,11 @@ class Vendor
   end
 
   def check_stock(food)
-    @inventory[food] 
+    unless @inventory[food] < 0
+      @inventory[food]
+    else
+      0
+    end 
   end
 
   def stock(name, amt)
