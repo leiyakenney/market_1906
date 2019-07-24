@@ -45,15 +45,14 @@ class Market
   def sell(item, amt)
     if total_inventory[item] < amt
       return false
-    else
-      @vendors.each do |vendor|
-        if vendor.inventory.keys.include?(item)
-          vendor.inventory[item] -= amt
-        end
-        # require 'pry'; binding.pry
-      end
-      return true
     end
+
+    @vendors.each do |vendor|
+      if vendor.inventory.keys.include?(item)
+        vendor.inventory[item] -= amt
+      end
+    end
+    return true
   end
 
 end
