@@ -15,7 +15,6 @@ class Vendor
   end
 
   def stock(name, amt)
-  #adding to existing inv hash
     if @inventory.keys.include?(name)
       inventory[name] += amt
     else
