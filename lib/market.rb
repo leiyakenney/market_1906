@@ -42,4 +42,12 @@ class Market
     tot_inventory
   end
 
+  def sell(item, amt)
+    if total_inventory[item] < amt
+      return false
+    else
+      return true
+    end 
+  end
+
 end
