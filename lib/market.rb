@@ -46,8 +46,14 @@ class Market
     if total_inventory[item] < amt
       return false
     else
+      @vendors.each do |vendor|
+        if vendor.inventory.keys.include?(item)
+          total_inventory[item] -= amt
+        end
+      end
       return true
-    end 
+    end
+    total_inventory
   end
 
 end

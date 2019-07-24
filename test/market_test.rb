@@ -106,6 +106,8 @@ class MarketTest < Minitest::Test
     refute @market.sell("Onions", 1)
     assert @market.sell("Banana Nice Cream", 5)
 
+    @market.sell("Banana Nice Cream", 5)
+    assert_equal 45, @vendor_2.check_stock("Banana Nice Cream")
   end
 
 end

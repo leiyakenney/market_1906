@@ -6,20 +6,12 @@ class Vendor
     @inventory = Hash.new(0)
   end
 
-  def check_stock(food)(amt = 0)
-    stock = Hash.new
-    @inventory.each do |name,amt|
-      stock[name] = amt
-    end
-    stock.values.sum
+  def check_stock(food)
+    @inventory[food] 
   end
 
   def stock(name, amt)
-    if @inventory.keys.include?(name)
-      inventory[name] += amt
-    else
-      inventory[name] = amt
-    end
+    @inventory[name] += amt
   end
 
 end
