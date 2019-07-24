@@ -6,7 +6,7 @@ class Vendor
     @inventory = Hash.new(0)
   end
 
-  def check_stock(food)
+  def check_stock(food)(amt = 0)
     stock = Hash.new
     @inventory.each do |name,amt|
       stock[name] = amt
