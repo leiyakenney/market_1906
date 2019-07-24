@@ -55,4 +55,26 @@ class Market
     return true
   end
 
+# =============WORK IN PROGRESS=============
+# if any vendor includes the key of the item, put them into a separate hash
+# then take out the item number from them
+
+
+#   @vendors.each do |vendor|
+#     legit_vendors = []
+#     if vendor.inventory.keys.include?(item)
+#       legit_vendors << vendor
+#     end
+#     legit_vendors.each do |vendor|
+#       if vendor.inventory[item] < amt
+#         vendor.inventory[item] = 0
+#         amt = (amt -= vendor.inventory[item])
+#       else
+#       vendor.inventory[item] -= amt
+#       end
+#     end
+#   end
+#   return true
+# end
+
 end
